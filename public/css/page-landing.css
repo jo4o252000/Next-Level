@@ -1,0 +1,93 @@
+#page-landing {
+  background: linear-gradient(329.54deg, #26b6d1 0%, #00c7c7 100%) no-repeat;
+  text-align: center; /*alinhando o texto no centro*/
+  min-height: 100vh; /*altura minima*/
+  display: flex; /*vai pegar os elementos dentro da div e colocar eles um do lado do outro não importa se os elemntos são block (div - h1 - p)*/
+}
+.location,
+h1,
+.visit p {
+  height: 16vh;
+}
+
+#container {
+  margin: auto; /*desta forma ele atribui o valor para todos os lados*/
+  width: min(90%, 112rem);
+}
+
+.visit a {
+  width: 8rem;
+  height: 8rem;
+  background-color: #ffd666;
+  border: none;
+  border-radius: 3rem;
+  display: flex;
+  align-items: center; /*faz com que os itens fique alinhados com eixo x */
+  justify-content: center; /*vai mexer no eixo x para deixar alnhado com o eixo y */
+  margin: auto;
+
+  transition: background 200ms;
+}
+.visit a:hover{
+    background-color: #96feff;
+}
+#logo {
+  animation-delay: 50ms;
+}
+
+.location {
+  animation-delay: 100ms;
+}
+main h1 {
+  animation-delay: 150ms;
+}
+.visit p {
+  animation-delay: 200ms;
+}
+.visit a {
+  animation-delay: 250ms;
+}
+
+/*desktop version*/
+@media(min-width:760px){
+  #container {
+    padding: 5rem 2rem;
+    /*shorthande background: image reapeat position / size*/
+    background:url("../images/bg.svg") no-repeat 80% / clamp(30rem, 54vw, 56rem);
+  } 
+  header{
+    display:flex;
+    /*as propriedades aling-items e justify-content são disponiveis so com display=flex ou display= grid  */
+    align-items: center;
+    justify-content: space-between;/*space-between faz com que os itens fique separados um em cada lado da pagina*/
+  }
+  .location, h1, .visit p{
+    height: initial;
+    text-align: initial;
+  }
+  .location {
+    text-align: right;
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+  main h1{
+    font-size: clamp(4rem, 8vw, 8.4rem) ;/* (minimo que eu quero,o tmanho ideal, o maximo que eu quero que chegue)*/
+    line-height: .88;/*espaçamento das linhas*/
+    font-weight: bold;/*deixa a letra grossa*/
+    margin: clamp(10%, 9vh, 12%) 0 4rem;
+    width:min(300px, 80%);/*limita o tamanho do meu texto*/
+  }
+  .visit{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+  }
+  .visit p{
+    font-size: 2.4rem;/*2.4rem e igual a 24px*/
+    line-height: 1.2;
+    width:clamp(20rem, 20vw, 30rem)
+  }
+  .visit a{
+    margin: initial;/*volta a cofiguração inicial*/
+  }
+}

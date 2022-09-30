@@ -1,0 +1,23 @@
+/*'EM' pega como refenrencia medida do pai
+'REM' pega sempre do html*/
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-size: 62.5%; /*tamano padrao da font e 16px logo 62.5% vira 10px*/
+}
+body {
+  height: 100vh;
+  color: white;
+  background: #fbf2f5;
+}
+body,
+input,
+buttom,
+textarea {
+  font-weight: 400; /* a força da letra, engrossa o traçado */
+  font-size: 1.8rem;
+  line-height: 1; /*espaço entre as linhas */
+  font-family: "Nunito", sans-serif;
+}
